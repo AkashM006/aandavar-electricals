@@ -2,7 +2,8 @@
     --primary-clr: #191919;
     --secondary-clr: #3081D0;
     --accent-clr: #fff;
-    --tablet-breakpoint: 768px;
+    --text-opacity: 0.7;    
+    
     scroll-behavior: smooth;
 }
 
@@ -25,6 +26,7 @@
     position: fixed;
     width: 100%;
     height: 75px;
+    z-index: 100;
 }
 
 .hero {
@@ -105,7 +107,7 @@
     max-width: 700px;
     line-height: 30px;
     color: var(--accent-clr);
-    opacity: 0.7;
+    opacity: var(--text-opacity);
 }
 
 .contact {
@@ -120,18 +122,35 @@
     gap: 1.5em;
 }
 
-.address {
+.footer {
     background-color: var(--primary-clr);
     padding: 3em 0;
+    min-height: 40vh;
 }
 
-.address__content {
-    text-align: center;
-    margin-top: 2em;
+.footer__container {
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.address__content > p {
-    opacity: 0.7;
+.footer__item__list {
+    opacity: var(--text-opacity);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+    margin-top: 1em;
+}
+
+.footer__item_title {
+    font-size: 2rem;
+}
+
+.accordion-expand {
+    display: none;       
+}
+
+.accordion-checkbox {
+    display: none;
 }
 
 .card {
@@ -165,7 +184,7 @@
 
 .card__subtitle {
     font-size: 0.75rem;
-    opacity: 0.6;
+    opacity: var(--text-opacity);
     margin: 1em 0;
 }
 
@@ -244,6 +263,37 @@
 
     .hero__title {
         font-size: 1.5rem;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        gap: 2em;
+        width: 50%;
+    }
+
+    .accordion-label {
+        display: flex;
+        gap: 2em;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition-property: max-height;
+        transition-duration: 500ms;
+        transition-timing-function: ease-in-out;
+    }
+
+    .accordion-expand {
+        display: block;
+        font-size: 2rem;
+        color: var(--accent-clr);
+    }
+
+    .accordion-checkbox:checked + .accordion-label + .accordion-content {
+        max-height: 1000px;
     }
 }
 
