@@ -9,20 +9,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <script src="./navbar.js" defer></script>
 </head>
 <body>
     <div class="nav">
         <div class="container nav__container">
             <div class="nav__left">
-                <!-- <img src="./gallery/menu-icon.png" class="navbar__collapse-icon" alt="menu"> -->
-                <img src="./logo.jpg" alt="Brand">
+                <img src="./gallery/menu-icon.png" class="nav__collapse-icon" id="nav-menu" alt="menu">
+                <img src="./logo.jpg" class="nav__logo" alt="Brand">
             </div>
-            <div class="nav__links">
+            <div class="nav__links" id="nav-links-container">
+                <a></a>
                 <a class="nav__link-item" href="#collections">
                     Collections
                 </a>
                 <a class="nav__link-item" href="#aboutus">About Us</a>
                 <a class="nav__link-item" href="#contact">Contact Us</a>
+                <a></a>
             </div>
         </div>
     </div>
