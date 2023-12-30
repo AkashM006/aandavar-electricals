@@ -29,6 +29,29 @@
     z-index: 100;
 }
 
+.nav__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar__collapse-icon {
+    height: 30;
+    aspect-ratio: 1;
+}
+
+.nav__links {
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+}
+
+.nav__link-item {
+    color: var(--accent-clr);
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .hero {
     padding-top: 75px;
     background: url('./gallery/pic.jpg');
