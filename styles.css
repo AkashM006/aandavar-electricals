@@ -103,7 +103,7 @@
 }
 
 .collections {
-    padding: 2em 0;
+    padding: 8em 0;
 }
 
 .collections__title {
@@ -143,6 +143,9 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
 }
 
 .contact__form {
@@ -157,6 +160,8 @@
     background-color: var(--primary-clr);
     padding: 3em 0;
     min-height: 40vh;
+    display: flex;
+    align-items: center;
 }
 
 .footer__container {
